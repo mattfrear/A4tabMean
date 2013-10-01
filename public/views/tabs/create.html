@@ -1,0 +1,27 @@
+<section data-ng-controller="TabsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+		<div class="control-group">
+			<label class="control-label" for="artist">Artist</label>
+			<div class="controls">
+				<input type="text" data-ng-model="artist" id="artist" placeholder="Artist" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="name">Song name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="name" id="name" placeholder="Song name" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="content">Tab</label>
+			<div class="controls">
+				<textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Tab"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>
