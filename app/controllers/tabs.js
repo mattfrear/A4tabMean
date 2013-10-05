@@ -80,7 +80,7 @@ exports.show = function(req, res) {
  * List of Tabs
  */
 exports.all = function(req, res) {
-    Tab.find().sort('-created').populate('user').exec(function(err, tabs) {
+    Tab.find().sort({artist: 1}).populate('user').exec(function(err, tabs) {
         if (err) {
             res.render('error', {
                 status: 500

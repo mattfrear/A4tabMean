@@ -2,5 +2,5 @@
 	<span>{{tab.created | date:'medium'}}</span> /
 	<span>{{tab.user.name}}</span>
 	<h2>{{tab.artist}} - {{tab.name}} <a data-ng-show="global.user._id == tab.user._id" href="/#!/tabs/{{tab._id}}/edit">edit</a></h2>
-	<div>{{tab.content}}</div>
+	<div class="tablature">{{tab.content}}</div>
 </section>
