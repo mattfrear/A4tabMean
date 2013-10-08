@@ -3,6 +3,9 @@
         <li>
             <a class="brand" href="/">A4tab Mean</a>
         </li>
+        <li>
+            <a href="#!/tabs">Tabs</a>
+        </li>
         <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
             <a href="#!/{{item.link}}">{{item.title}}</a>
         </li>
