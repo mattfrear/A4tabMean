@@ -24,6 +24,11 @@
     </p>
 </div>
 <h3>Ten Newest tabs</h3>
+<ul class="tabs unstyled">
+    <li data-ng-repeat="tab in tabs">
+        <a data-ng-href="#!/tabs/{{tab._id}}">{{tab.artist}} - {{tab.name}}</a>
+    </li>
+</ul>
 <div class="entry">
     <ul data-role="listview" data-inset="true">
 

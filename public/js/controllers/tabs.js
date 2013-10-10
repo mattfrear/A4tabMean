@@ -52,4 +52,5 @@ angular.module('mean.tabs').controller('TabsController', ['$scope', '$routeParam
             $scope.tab = tab;
         });
     };
+
 }]);

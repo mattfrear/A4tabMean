@@ -80,7 +80,7 @@ exports.show = function(req, res) {
  * List of Tabs
  */
 exports.all = function(req, res) {
-    Tab.find().sort({artist: 1}).populate('user').exec(function(err, tabs) {
+    Tab.find().sort('artist').select("-content").populate('user').exec(function(err, tabs) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -88,5 +88,17 @@ exports.all = function(req, res) {
         } else {
             res.jsonp(tabs);
         }
+    });
+};
+
+exports.newest = function(req, res) {
+    Tab.find().sort('-created').limit(10).select("-content").exec(function(err, tabs) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(tabs);
+        }   
     });
 };

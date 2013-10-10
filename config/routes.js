@@ -77,6 +77,7 @@ module.exports = function(app, passport, auth) {
     var tabs = require('../app/controllers/tabs');
     app.get('/tabs', tabs.all);
     app.post('/tabs', auth.requiresLogin, tabs.create);
+    app.get('/tabs/newest', tabs.newest);
     app.get('/tabs/:tabId', tabs.show);
     app.put('/tabs/:tabId', auth.requiresLogin, tabs.update);
     app.del('/tabs/:tabId', auth.requiresLogin, tabs.destroy);
