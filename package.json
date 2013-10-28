@@ -1,7 +1,7 @@
 {
     "name": "mean",
     "description": "MEAN - A Modern Stack: MongoDB, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "private": false,
     "author": "Amos Haviv",
     "repository": {
@@ -15,7 +15,7 @@
     "scripts": {
         "start": "node node_modules/grunt-cli/bin/grunt",
         "test": "node node_modules/grunt-cli/bin/grunt test",
-        "postinstall": "node node_modules/grunt-cli/bin/grunt install"
+        "postinstall": "bower install"
     },
     "dependencies": {
         "express": "latest",
@@ -23,6 +23,7 @@
         "mongoose": "latest",
         "connect-mongo": "latest",
         "connect-flash": "latest",
+        "crypto": "latest",
         "passport": "latest",
         "passport-local": "latest",
         "passport-facebook": "latest",
@@ -34,9 +35,10 @@
         "view-helpers": "latest",
         "mean-logger": "latest",
         "forever": "latest",
+        "bower": "latest",
         "grunt": "latest",
         "grunt-cli": "latest",
-        "grunt-bower-task": "latest"
+        "grunt-env": "latest"
     },
     "devDependencies": {
         "supertest": "latest",

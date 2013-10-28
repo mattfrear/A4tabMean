@@ -7,8 +7,11 @@ var express = require('express'),
     helpers = require('view-helpers'),
     config = require('./config');
 
-module.exports = function(app, passport) {
-    app.set('showStackError', true);
+module.exports = function(app, passport, db) {
+    app.set('showStackError', true);    
+    
+    //Prettify HTML
+    app.locals.pretty = true;
 
     //Should be placed before express.static
     app.use(express.compress({
@@ -46,7 +49,7 @@ module.exports = function(app, passport) {
         app.use(express.session({
             secret: 'MEAN',
             store: new mongoStore({
-                url: config.db,
+                db: db.connection.db,
                 collection: 'sessions'
             })
         }));

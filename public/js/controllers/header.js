@@ -5,4 +5,6 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         "title": "Create New Tab",
         "link": "tabs/create"
     }];
+    
+    $scope.isCollapsed = false;
 }]);
