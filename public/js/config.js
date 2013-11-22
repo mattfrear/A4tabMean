@@ -1,5 +1,5 @@
 //Setting up route
-window.app.config(['$routeProvider',
+angular.module('mean').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/articles', {
@@ -36,7 +36,7 @@ window.app.config(['$routeProvider',
 ]);
 
 //Setting HTML5 Location Mode
-window.app.config(['$locationProvider',
+angular.module('mean').config(['$locationProvider',
     function($locationProvider) {
         $locationProvider.hashPrefix("!");
     }
